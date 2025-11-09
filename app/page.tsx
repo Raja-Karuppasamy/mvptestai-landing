@@ -1,5 +1,5 @@
 'use client'
-
+import Link from 'next/link'
 import { useState } from 'react'
 
 export default function Home() {
@@ -20,9 +20,11 @@ export default function Home() {
         <div className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
           AI MVP Tester
         </div>
-        <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg transition">
-          Get Started
-        </button>
+       <Link href="/auth/signup">
+  <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg transition">
+    Get Started
+  </button>
+</Link>
       </nav>
 
       {/* Hero Section */}
@@ -41,13 +43,15 @@ export default function Home() {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-          <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition transform hover:scale-105 shadow-lg">
-            Start Free Trial
-          </button>
-          <button className="border-2 border-blue-400 text-blue-400 hover:bg-blue-400/10 px-8 py-4 rounded-lg font-semibold text-lg transition">
-            Watch Demo
-          </button>
-        </div>
+  <Link href="/auth/signup">
+    <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition transform hover:scale-105 shadow-lg">
+      Start Free Trial
+    </button>
+  </Link>
+  <button className="border-2 border-blue-400 text-blue-400 hover:bg-blue-400/10 px-8 py-4 rounded-lg font-semibold text-lg transition">
+    Watch Demo
+  </button>
+</div>
 
         {/* Demo Placeholder */}
         <div className="bg-slate-800 rounded-xl overflow-hidden mb-16 aspect-video max-w-4xl mx-auto flex items-center justify-center border border-slate-700 shadow-2xl">
